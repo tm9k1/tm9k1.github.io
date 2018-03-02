@@ -56,9 +56,8 @@ h1 {
 }
 
 .fa {
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
-    height: 2.5rem;
     text-align: center;
     text-decoration: none;
     background: linear-gradient(45deg, #00eeee, #66cd00);
@@ -67,7 +66,7 @@ h1 {
     background-size: 400% 400%;
     -webkit-animation: brandingAnim 2s ease-out infinite;
     animation: brandingAnim 2s ease-out infinite;
-    margin: 0.8rem;
+    margin: 0.5rem;
 }
 
 .about {
