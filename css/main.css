@@ -35,7 +35,7 @@ h1 {
 }
 .handle {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #ffbe00;
     font-family: 'reisregular', Arial, sans-serif; 
     margin: 0;
@@ -47,6 +47,7 @@ h1 {
 
     position: fixed;
     margin: 0;
+    size : 2rem;
     width: 100vw;
     min-height: 2.5rem;
     text-align: center;
@@ -55,8 +56,7 @@ h1 {
 }
 
 .fa {
-    font-size: 2.5rem;
-    width: 2.5rem;
+    font-size: 1.6rem;
     cursor: pointer;
     height: 2.5rem;
     text-align: center;
