@@ -44,12 +44,14 @@ h1 {
 
 
 .links {
-    /* background: pink; */
+
     position: fixed;
+    margin: 0;
     width: 100vw;
     min-height: 2.5rem;
     text-align: center;
     bottom: 0;
+
 }
 
 .fa {
@@ -69,7 +71,7 @@ h1 {
 }
 
 .about {
-    /* background: pink; */
+ 
     margin-left: 8vw;
     margin-right:8vw;
     font-family: 'Raleway', sans-serif;
