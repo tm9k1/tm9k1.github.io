@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Use Point class
  * @see http://jsdo.it/akm2/fhMC
  */
@@ -1298,7 +1298,7 @@ global.Timer = Timer;
 
 var FPS = 60,
     PARTICLE_RADIUS = 1,
-    PREF_PARTICLE_NUM = 700,
+    PREF_PARTICLE_NUM = 300,
     USER_ADD_PERTICLE_NUM = 10,
     G_POINT_RADIUS = 10,
     G_POINT_RADIUS_LIMITS = 65;
