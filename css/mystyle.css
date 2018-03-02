@@ -1,3 +1,13 @@
+
+@font-face {
+    font-family: 'reisregular';
+    src: url('fonts/reis-regular-webfont.woff2') format('woff2'),
+         url('fonts/reis-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -16,14 +26,14 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   color: #999;
-  background-position: left top;
+  background-position: left center;
   background-repeat: repeat;
 }
 
 html, body {
   background: #444;
   position: relative;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'reisregular', Arial, sans-serif; 
   font-size: 16px;
   height: 100%;
 }
@@ -167,7 +177,7 @@ html, body {
 }
 
 .glitch {
-  color: white;
+  color: black;
   font-size: 7em;
   font-weight: bold;
   position: relative;
