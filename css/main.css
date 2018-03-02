@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 body{
     margin: 0;
     padding: 0;
-    background: #1c1c1b;
 }
-
 @font-face {
     font-family: 'reisregular';
     src: url('fonts/reis-regular-webfont.woff2') format('woff2'),
@@ -14,8 +11,11 @@ body{
     font-style: normal;
 
 }
+p {
+    position: relative;}
 h1 {
- 
+    
+    position: relative;
     text-align: center;
     font-weight: 300;
     font-family: 'reisregular', Arial, sans-serif; 
@@ -30,10 +30,14 @@ h1 {
     margin-top: 5vh;
 }
 .mainTitle {
+
+    position: relative;
     font-size: 16vw;
     font-family: 'reisregular', Arial, sans-serif; 
 }
 .handle {
+
+    position: relative;
     text-align: center;
     font-size: 1rem;
     color: #ffbe00;
