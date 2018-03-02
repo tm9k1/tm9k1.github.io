@@ -31,7 +31,18 @@ body {
   margin-right: auto;
   margin-top: 40px;
 }
+span { 
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
 
+  z-index: 1;
+
+  /* fixes overlap error in IE7/8, 
+     make sure you have an empty gif */
+}
 .big_core {
   background: #cedce0;
   width: 200px;
