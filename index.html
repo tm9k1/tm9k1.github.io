@@ -12,12 +12,14 @@
 		<meta charset="utf-8" />
 		<meta name="description" content="About Piyush Aggarwal and his love for tech!">
 		<meta name="og:image" content="https://i.imgur.com/xyur7fA.jpg" />
-		<meta name="theme-color" content="#48485e" />
+		<meta name="theme-color" content="#4e5a74" />
 		<meta name="keywords" content="Data, Data Scientist, Pythonista, C++, HTML, CSS, XML, JavaScript, Piyush, Aggarwal, brute4s99, mindretfarc">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- <script type="text/javascript" src="assets/js/gen_validatorv4.js"></script> -->
+		<script language="JavaScript" src="assets/js/gen_validatorv4.js" type="text/javascript" xml:space="preserve"></script>
 		
 	</head>
 	<body class="is-preload">
@@ -51,24 +53,10 @@
 
 				<!-- Main -->
 					<div id="main">
-						<!-- Work -->
-						<article id="work">
-							<h2 class="major">Work</h2>
-							<span class="image main">
-								<img src="images/pic02.jpg" alt="" />
-							</span>
-							<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat.
-								Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-							<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-								Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum
-								dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus
-								amet feugiat tempus.</p>
-						</article>
-
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form method="post" name="contactform" action="#">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -111,6 +99,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script language="JavaScript">
+			
+				var frmvalidator = new Validator("contactform");
+			
+				frmvalidator.addValidation("name", "req", "Please provide your name");
+			
+				frmvalidator.addValidation("email", "req", "Please provide your e-mail ID");
+			
+				frmvalidator.addValidation("email", "email", "Please enter a valid email address");
+				
+			</script>
 
+			//]]></script>
 	</body>
 </html>
