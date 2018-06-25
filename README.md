@@ -1,4 +1,4 @@
-#Resume / Branding
-##Background by Akimitsu Hamamuro https://codepen.io/akm2/details/rHIsa/
-##Handbrush Font by REIS FONTS https://fondfont.com/reis-free-font-download/
-##404 Page uses CODEPEN https://codepen.io/MrDoctype/pen/oLrBEv 
+# Branding
+A Ver 2.0 for my Personal Website.
+*now with blog functions !*
+[**It's dope AF !**](https://piyush.tech)
