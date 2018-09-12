@@ -25,7 +25,7 @@ $(document).ready(function() {
 
                 // log data to the console so we can see
                 console.log(data); 
-                alert("We have received your message. We will contact you within 2 working days.")
+                alert("Your message was sent!")
                 // here we will handle errors and validation messages
             });
 
