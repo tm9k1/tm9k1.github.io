@@ -29,6 +29,7 @@ $(document).ready(function() {
                 $('form').each(function(){
                     this.reset();
                 });// here we will handle errors and validation messages
+
             });
 
         // stop the form from submitting the normal way and refreshing the page
