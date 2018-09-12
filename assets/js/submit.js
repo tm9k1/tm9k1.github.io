@@ -25,8 +25,10 @@ $(document).ready(function() {
 
                 // log data to the console so we can see
                 console.log(data); 
-                alert("We have received your message. We will contact you within 2 working days.")
-                // here we will handle errors and validation messages
+                alert("Message Received. I'll be Back!");
+                $('form').each(function(){
+                    this.reset();
+                });// here we will handle errors and validation messages
             });
 
         // stop the form from submitting the normal way and refreshing the page
