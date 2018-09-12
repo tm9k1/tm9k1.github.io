@@ -9,7 +9,7 @@ $(document).ready(function() {
         var formData = {
             'name'              : $('input[name=name]').val(),
             'email'             : $('input[name=email]').val(),
-            'message'    : $('input[name=message]').val()
+            'message'    : $('textarea[name=message]').val()
         };
 
         // process the form
