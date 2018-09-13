@@ -24,7 +24,7 @@ $(document).ready(function() {
             .done(function(data) {
 
                 // log data to the console so we can see
-                console.log(data); 
+                console.log(data);  
                 alert("Message Received. I'll be Back!");
                 $('form').each(function(){
                     this.reset();
