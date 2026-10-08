@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Nitya Prakash & Piyush Aggarwal are getting married. Wednesday 25 November 2026, 7:00 PM onwards, The Royal by Meraki, Sector 15, Rohini, Delhi.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nitya &amp; Piyush are getting married">
+<meta property="og:description" content="Wednesday 25 November 2026 · 7:00 PM onwards · The Royal by Meraki, Rohini, Delhi. Open your invitation.">
+<meta name="theme-color" content="#170a14">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
+<title>Nitya &amp; Piyush</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Marcellus+SC&family=Pinyon+Script&family=Tiro+Devanagari+Hindi&family=Tiro+Telugu&display=swap">
+<style>
+/* Layout: one sticky stage holds a 360x640 scene zoomed to fit; scroll progress through a tall track drives
+   seal -> flap -> card out -> gatefold doors open. The details then flow below on the night sky.
+   Single-theme by choice: a Kanjeevaram-silk envelope on a wedding night, the same in light or dark hosts. */
+:root{
+  --night:#170a14;          /* wedding night, aubergine-black */
+  --night-hi:#2a1224;
+  --silk:#a0155a;           /* rani-pink Kanjeevaram */
+  --peacock:#0e4d4f;        /* contrast border silk */
+  --zari-lo:#9c7128;        /* gold zari thread */
+  --zari:#d6ad5c;
+  --zari-hi:#f7e2a6;
+  --bronze-lo:#6f4a14;      /* foil on ivory paper */
+  --bronze:#a77a2c;
+  --bronze-hi:#dcb767;
+  --paper:#f8f1e2;          /* ivory handmade card */
+  --ink:#4b0e22;            /* kumkum maroon ink */
+  --f-script:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;
+  --f-serif:"Bodoni Moda","Bodoni 72","Didot",Georgia,serif;
+  --f-caps:"Marcellus SC","Trajan Pro",Georgia,serif;
+  --f-deva:"Tiro Devanagari Hindi","Kohinoor Devanagari","Devanagari Sangam MN",serif;
+  --f-telu:"Tiro Telugu","Kohinoor Telugu","Telugu Sangam MN",serif;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--night)}
+body{margin:0;background:var(--night);color:var(--paper);font-family:var(--f-serif);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+
+#sky,#petals{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+#sky{z-index:0}
+#petals{z-index:5}
+
+/* ---------- stage ---------- */
+.track{position:relative;z-index:1;height:640vh;height:640svh}
+.stage{position:sticky;top:env(safe-area-inset-top,0px);height:100vh;height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));overflow:hidden;display:grid;place-items:center;
+  background:radial-gradient(55% 45% at 50% 56%,rgba(160,21,90,.20),rgba(160,21,90,0) 70%)}
+.scene{position:relative;width:360px;height:640px;--sheen:12%}
+.scene p{margin:0}
+.scene svg{display:block;overflow:visible}
+.cam{position:absolute;inset:0;transform-origin:180px 320px}
+
+.foil,.foil-deep{-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;background-size:240% 100%;background-position:var(--sheen) 50%}
+.foil{background-image:linear-gradient(105deg,var(--zari-lo) 0%,var(--zari) 18%,var(--zari-hi) 30%,var(--zari) 44%,var(--zari-lo) 58%,var(--zari) 74%,var(--zari-hi) 84%,var(--zari) 100%)}
+.foil-deep{background-image:linear-gradient(105deg,var(--bronze-lo) 0%,var(--bronze) 18%,var(--bronze-hi) 30%,var(--bronze) 44%,var(--bronze-lo) 58%,var(--bronze) 74%,var(--bronze-hi) 84%,var(--bronze) 100%)}
+
+.kicker{position:absolute;left:0;right:0;top:38px;z-index:8;text-align:center;font:400 10.5px/1.7 var(--f-caps);letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:var(--zari)}
+.cue{position:absolute;left:0;right:0;z-index:8;text-align:center;font:400 10px/1 var(--f-caps);letter-spacing:.32em;padding-left:.32em;text-transform:uppercase;color:var(--zari);pointer-events:none}
+.cue-start{top:566px}
+.cue-end{top:568px;opacity:0}
+.thread{display:block;width:1px;height:30px;margin:12px auto 0;background:linear-gradient(var(--zari),rgba(214,173,92,0));transform-origin:top;animation:thread 2.4s ease-in-out infinite}
+@keyframes thread{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- envelope ---------- */
+.env-part{position:absolute;left:22px;top:97px;width:316px;height:446px}
+.env-back{z-index:1;border-radius:5px;box-shadow:0 34px 60px -14px rgba(8,0,6,.75),0 4px 10px rgba(8,0,6,.35)}
+.env-pocket{z-index:4}
+.env-flap{height:252px;z-index:5;transform-origin:50% 0;transform-style:preserve-3d}
+.env-flap .face{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.env-flap .face.in{transform:rotateY(180deg)}
+.env-names{position:absolute;left:0;right:0;top:280px;display:grid;justify-items:center;gap:10px;text-align:center}
+.env-names .who{font:400 38px/1.3 var(--f-script);padding:0 .3em}
+.env-names .when{font:400 11px/1 var(--f-caps);letter-spacing:.4em;padding-left:.4em;color:var(--zari-hi)}
+.seal{position:absolute;left:140px;top:290px;width:80px;height:80px;z-index:6;filter:drop-shadow(0 4px 5px rgba(40,0,20,.5))}
+.seal .half{position:absolute;inset:0}
+.seal .half.l{clip-path:polygon(0 0,54% 0,47% 22%,56% 44%,46% 66%,54% 84%,49% 100%,0 100%)}
+.seal .half.r{clip-path:polygon(54% 0,100% 0,100% 100%,49% 100%,54% 84%,46% 66%,56% 44%,47% 22%)}
+
+/* ---------- card ---------- */
+.card{position:absolute;left:22px;top:91px;width:316px;height:458px;z-index:3;transform:scale(.92);transform-origin:50% 50%}
+.card-3d{position:absolute;inset:0;perspective:1100px}
+.inner{position:absolute;inset:0;background:var(--paper);color:var(--ink);border-radius:2px;overflow:hidden;
+  box-shadow:0 34px 56px -20px rgba(8,0,6,.8),0 2px 6px rgba(8,0,6,.3)}
+.inner::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .36 0 0 0 0 .24 0 0 0 0 .12 0 0 0 .10 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+.inner-art{position:absolute;inset:0;width:316px;height:458px}
+.inner-copy{position:absolute;inset:0;padding:58px 28px 34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;text-align:center}
+.ic-together{font:italic 400 12px/1.3 var(--f-serif);opacity:.85}
+.ic-couple{display:flex;flex-direction:column;align-items:center}
+.ic-person{display:grid;justify-items:center}
+.ic-name{font:400 34px/1.2 var(--f-script);padding:0 .3em}
+.ic-parents{font:italic 400 10.5px/1.35 var(--f-serif);opacity:.8}
+.ic-amp{font:italic 400 18px/1.2 var(--f-serif);color:var(--bronze);padding-block:4px 1px}
+.ic-request{font:400 11.5px/1.5 var(--f-serif);text-wrap:balance}
+.ic-date{display:grid;justify-items:center;gap:5px}
+.ic-month{font:400 11px/1 var(--f-caps);letter-spacing:.44em;padding-left:.44em;color:var(--bronze)}
+.ic-row{display:flex;align-items:center;gap:12px}
+.ic-side{width:80px;padding:6px 0 5px .24em;border-block:1px solid rgba(75,14,34,.55);font:400 9.5px/1 var(--f-caps);letter-spacing:.24em}
+.ic-day{font:500 46px/1 var(--f-serif);font-variant-numeric:lining-nums;padding:0 .08em}
+.ic-time{font:italic 400 11.5px/1.2 var(--f-serif)}
+.ic-place{display:grid;gap:3px}
+.ic-venue{font:400 13px/1.2 var(--f-caps);letter-spacing:.14em}
+.ic-addr{font:italic 400 11px/1.3 var(--f-serif);opacity:.85}
+
+.door{position:absolute;top:0;width:158px;height:458px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.door-l{left:0;transform-origin:0 50%}
+.door-r{left:158px;transform-origin:100% 50%}
+.door-l::after,.door-r::after{content:"";position:absolute;top:0;bottom:0;width:1px}
+.door-l::after{right:0;background:rgba(0,0,0,.4)}
+.door-r::after{left:0;background:rgba(247,226,166,.14)}
+.cover{position:absolute;top:0;left:0;width:316px;height:458px}
+.door-r .cover{left:-158px}
+.cover svg{position:absolute;inset:0;width:316px;height:458px}
+.cv{position:absolute;text-align:center}
+.cv-te{left:52px;width:106px;top:129px;font:400 15px/1.3 var(--f-telu)}
+.cv-hi{left:158px;width:106px;top:126px;font:400 17px/1.3 var(--f-deva)}
+.cv-mono{top:186px;left:106px;width:104px;display:flex;font:italic 500 50px/1.1 var(--f-serif);background-size:180% 100%}
+.cv-mono span{width:52px}
+.cv-mono span:first-child{text-align:right;padding-right:4px}
+.cv-mono span:last-child{text-align:left;padding-left:5px}
+.cv-name-n,.cv-name-p{top:284px;width:106px;font:400 30px/1.3 var(--f-script)}
+.cv-name-n{left:52px}
+.cv-name-p{left:158px}
+.cv-date{left:0;width:316px;top:362px;font:400 10.5px/1 var(--f-caps);letter-spacing:.36em;padding-left:.36em;text-transform:uppercase;color:var(--zari-hi)}
+
+/* ---------- details ---------- */
+.details{position:relative;z-index:2;max-width:720px;margin:0 auto;padding-inline:20px;padding-block:clamp(56px,10vw,104px) 96px;display:grid;gap:clamp(64px,10vw,104px);text-align:center}
+.details section,.details footer{display:grid;justify-items:center;gap:20px}
+.eyebrow{margin:0;font:400 11px/1.4 var(--f-caps);letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:var(--zari)}
+.orn{width:22px;height:22px;color:var(--zari);opacity:.8}
+.quote{margin:0;max-width:30ch;font:italic 400 clamp(20px,3.8vw,28px)/1.5 var(--f-serif);color:var(--paper);text-wrap:balance}
+.sign{margin:0;font:400 clamp(36px,7vw,48px)/1.3 var(--f-script);padding:0 .3em;--sheen:30%}
+.count{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,4vw,40px);width:min(100%,460px)}
+.unit{display:grid;gap:8px;justify-items:center}
+.num{font:500 clamp(44px,11vw,76px)/1 var(--f-serif);font-variant-numeric:tabular-nums lining-nums;--sheen:30%}
+.unit-l{font:400 10.5px/1 var(--f-caps);letter-spacing:.3em;padding-left:.3em;text-transform:uppercase;color:rgba(248,241,226,.7)}
+.count-note{margin:0;font:italic 400 15px/1.5 var(--f-serif);color:rgba(248,241,226,.72)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;border-block:1px solid rgba(214,173,92,.35)}
+.fact{display:grid;gap:8px;align-content:start;padding:26px 14px;min-width:0}
+.fact + .fact{border-left:1px solid rgba(214,173,92,.35)}
+.fact-l{font:400 10.5px/1 var(--f-caps);letter-spacing:.3em;padding-left:.3em;text-transform:uppercase;color:var(--zari)}
+.fact-v{font:400 21px/1.3 var(--f-serif);color:var(--paper);text-wrap:balance}
+.fact-s{font:italic 400 14.5px/1.4 var(--f-serif);color:rgba(248,241,226,.7)}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border:1px solid var(--zari);border-radius:2px;background:transparent;color:var(--zari-hi);font:400 12.5px/1 var(--f-caps);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .25s,color .25s}
+.btn.solid{background:var(--zari);color:var(--night)}
+.btn:hover{background:var(--zari-hi);color:var(--night)}
+.btn:focus-visible{outline:2px solid var(--zari-hi);outline-offset:3px}
+.closing{margin:0;max-width:34ch;font:400 17px/1.6 var(--f-serif);color:rgba(248,241,226,.82);text-wrap:balance}
+@media (max-width:620px){
+  .facts{grid-template-columns:1fr}
+  .fact + .fact{border-left:0;border-top:1px solid rgba(214,173,92,.35)}
+  .fact{padding:22px 8px}
+}
+
+/* reduced motion: show the opened card, no scroll choreography */
+.rm .track{height:auto}
+.rm .stage{position:relative;top:0}
+.rm .cue,.rm .kicker{display:none}
+@media (prefers-reduced-motion:reduce){.thread{animation:none}}
+</style>
+</head>
+<body>
+
+<h1 class="sr">Nitya Prakash and Piyush Aggarwal are getting married. Wednesday 25 November 2026, 7:00 PM onwards, The Royal by Meraki, Sector 15, Rohini, Delhi.</h1>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gGold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="316" y2="458">
+      <stop offset="0" stop-color="#9c7128"/><stop offset=".3" stop-color="#e3c172"/><stop offset=".48" stop-color="#f7e2a6"/><stop offset=".66" stop-color="#c99f4f"/><stop offset="1" stop-color="#8f6522"/>
+    </linearGradient>
+    <linearGradient id="gBronze" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="316" y2="458">
+      <stop offset="0" stop-color="#7a5216"/><stop offset=".35" stop-color="#c49a48"/><stop offset=".5" stop-color="#e2c27a"/><stop offset=".7" stop-color="#a77a2c"/><stop offset="1" stop-color="#6f4a14"/>
+    </linearGradient>
+    <linearGradient id="gSilk" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="316" y2="446">
+      <stop offset="0" stop-color="#6d0c3c"/><stop offset=".32" stop-color="#9d1556"/><stop offset=".5" stop-color="#bf286a"/><stop offset=".64" stop-color="#a3175b"/><stop offset="1" stop-color="#650a37"/>
+    </linearGradient>
+    <linearGradient id="gSilkFlap" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="316" y2="252">
+      <stop offset="0" stop-color="#7e0f47"/><stop offset=".42" stop-color="#b21c62"/><stop offset=".55" stop-color="#ca3476"/><stop offset=".72" stop-color="#a8195d"/><stop offset="1" stop-color="#760d41"/>
+    </linearGradient>
+    <linearGradient id="gPeacock" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="316" y2="458">
+      <stop offset="0" stop-color="#093a3c"/><stop offset=".45" stop-color="#0f5858"/><stop offset=".56" stop-color="#136867"/><stop offset="1" stop-color="#0a4143"/>
+    </linearGradient>
+    <radialGradient id="gGlow" cx=".5" cy=".42" r=".65">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".10"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gMouth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a0a00" stop-opacity=".55"/><stop offset=".35" stop-color="#2a0a00" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="gWax" cx=".38" cy=".32" r=".78">
+      <stop offset="0" stop-color="#f9e6aa"/><stop offset=".32" stop-color="#ddb460"/><stop offset=".7" stop-color="#b88a33"/><stop offset="1" stop-color="#7f5a1c"/>
+    </radialGradient>
+    <linearGradient id="gLeaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5f8f3f"/><stop offset="1" stop-color="#2d5529"/>
+    </linearGradient>
+    <pattern id="pTempleUp" x="8" y="0" width="10" height="9" patternUnits="userSpaceOnUse"><path d="M0 9L5 0L10 9Z" fill="#d6ad5c"/></pattern>
+    <pattern id="pTempleDown" x="8" y="0" width="10" height="9" patternUnits="userSpaceOnUse"><path d="M0 0L5 9L10 0Z" fill="#d6ad5c"/></pattern>
+    <pattern id="pBrocade" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#a8772a"/>
+      <path d="M0 0L24 24M24 0L0 24" stroke="#c99a45" stroke-width=".5" opacity=".55"/>
+      <g transform="translate(12 12)" fill="#f2d68f">
+        <ellipse cy="-3.3" rx="1.6" ry="2.9"/><ellipse cy="-3.3" rx="1.6" ry="2.9" transform="rotate(90)"/>
+        <ellipse cy="-3.3" rx="1.6" ry="2.9" transform="rotate(180)"/><ellipse cy="-3.3" rx="1.6" ry="2.9" transform="rotate(270)"/>
+        <circle r="1.3" fill="#8a5d1b"/>
+      </g>
+      <g fill="#f2d68f"><circle r="1.1"/><circle cx="24" r="1.1"/><circle cy="24" r="1.1"/><circle cx="24" cy="24" r="1.1"/></g>
+    </pattern>
+    <filter id="fShadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1a0010" flood-opacity=".5"/>
+    </filter>
+    <symbol id="rosette" viewBox="-10 -10 20 20">
+      <g fill="currentColor">
+        <ellipse cy="-5.2" rx="1.9" ry="3.6"/><ellipse cy="-5.2" rx="1.9" ry="3.6" transform="rotate(45)"/>
+        <ellipse cy="-5.2" rx="1.9" ry="3.6" transform="rotate(90)"/><ellipse cy="-5.2" rx="1.9" ry="3.6" transform="rotate(135)"/>
+        <ellipse cy="-5.2" rx="1.9" ry="3.6" transform="rotate(180)"/><ellipse cy="-5.2" rx="1.9" ry="3.6" transform="rotate(225)"/>
+        <ellipse cy="-5.2" rx="1.9" ry="3.6" transform="rotate(270)"/><ellipse cy="-5.2" rx="1.9" ry="3.6" transform="rotate(315)"/>
+        <circle r="2.2"/>
+      </g>
+    </symbol>
+    <symbol id="sealArt" viewBox="0 0 80 80">
+      <path d="M75.5 36.2 Q77.8 40.0 76.9 44.1 Q76.1 48.2 74.4 52.0 Q72.8 55.8 69.7 58.5 Q66.7 61.3 63.9 63.9 Q61.2 66.5 58.2 69.2 Q55.3 71.8 51.2 71.5 Q47.1 71.2 43.6 72.3 Q40.0 73.3 36.0 74.1 Q32.0 75.0 28.1 74.0 Q24.1 73.0 20.4 71.1 Q16.8 69.1 14.8 65.4 Q12.8 61.7 10.1 58.7 Q7.3 55.7 6.1 51.9 Q5.0 48.0 6.4 44.0 Q7.8 40.0 7.8 36.3 Q7.8 32.7 8.8 29.0 Q9.7 25.4 10.8 21.5 Q12.0 17.6 14.7 14.7 Q17.5 11.8 21.2 10.3 Q24.9 8.7 28.2 5.9 Q31.5 3.0 35.8 3.1 Q40.0 3.3 43.8 5.0 Q47.6 6.7 51.0 8.3 Q54.5 10.0 57.5 12.2 Q60.4 14.4 64.0 16.2 Q67.6 18.0 69.0 21.7 Q70.4 25.4 71.8 28.9 Q73.2 32.4 75.5 36.2Z" fill="url(#gWax)"/>
+      <circle cx="40" cy="39" r="25.5" fill="none" stroke="#fff3c4" stroke-opacity=".45" stroke-width=".8"/>
+      <circle cx="40" cy="38.5" r="25" fill="none" stroke="#6f4c15" stroke-opacity=".6" stroke-width="1.3"/>
+      <text x="40.6" y="46.6" text-anchor="middle" font-family="Bodoni Moda, Didot, Georgia, serif" font-style="italic" font-size="20" fill="#fff1c2" fill-opacity=".55">N<tspan font-size="11" dx="1.5" dy="-3">&amp;</tspan><tspan dx="1.5" dy="3">P</tspan></text>
+      <text x="40" y="46" text-anchor="middle" font-family="Bodoni Moda, Didot, Georgia, serif" font-style="italic" font-size="20" fill="#6f4c15">N<tspan font-size="11" dx="1.5" dy="-3">&amp;</tspan><tspan dx="1.5" dy="3">P</tspan></text>
+    </symbol>
+    <symbol id="coverArt" viewBox="0 0 316 458">
+      <rect width="316" height="458" fill="url(#gPeacock)"/>
+      <rect width="316" height="458" fill="url(#gGlow)"/>
+      <rect x="8.5" y="8.5" width="299" height="441" fill="none" stroke="url(#gGold)" stroke-width="1.5"/>
+      <rect x="13.5" y="13.5" width="289" height="431" fill="none" stroke="url(#gGold)" stroke-width=".6"/>
+      <rect x="18" y="18" width="280" height="9" fill="url(#pTempleUp)"/>
+      <rect x="18" y="432" width="280" height="9" fill="url(#pTempleDown)"/>
+      <path d="M18 29.5H298M18 430.5H298" stroke="#d6ad5c" stroke-width=".6"/>
+      <path d="M42 418V182C42 132 94 112 126 90C141 80 152 66 158 48C164 66 175 80 190 90C222 112 274 132 274 182V418" fill="none" stroke="url(#gGold)" stroke-width="1.4"/>
+      <path d="M52 418V184C52 140 100 122 130 101C144 91 153 80 158 68C163 80 172 91 186 101C216 122 264 140 264 184V418" fill="none" stroke="url(#gGold)" stroke-width=".7" opacity=".8"/>
+      <path d="M36 418.5H280" stroke="url(#gGold)" stroke-width="1"/>
+      <path d="M158 33C161.5 38 161.5 42 158 46C154.5 42 154.5 38 158 33Z" fill="url(#gGold)"/>
+      <circle cx="158" cy="214" r="50" fill="#0a3b3d" stroke="url(#gGold)" stroke-width="1.4"/>
+      <circle cx="158" cy="214" r="44" fill="none" stroke="url(#gGold)" stroke-width=".7" stroke-dasharray="1.4 3.2"/>
+      <use href="#rosette" x="151" y="156" width="14" height="14" style="color:#d6ad5c"/>
+      <use href="#rosette" x="151" y="258" width="14" height="14" style="color:#d6ad5c"/>
+      <path d="M158 299l4.5 4.5-4.5 4.5-4.5-4.5z" fill="url(#gGold)"/>
+      <path d="M96 352.5H220M96 383.5H220" stroke="#d6ad5c" stroke-width=".6"/>
+      <circle cx="96" cy="352.5" r="1.4" fill="#d6ad5c"/><circle cx="220" cy="352.5" r="1.4" fill="#d6ad5c"/>
+      <circle cx="96" cy="383.5" r="1.4" fill="#d6ad5c"/><circle cx="220" cy="383.5" r="1.4" fill="#d6ad5c"/>
+    </symbol>
+  </defs>
+</svg>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<div class="track" id="track">
+  <div class="stage" id="stage">
+    <div class="scene" id="scene">
+      <p class="kicker" id="kicker">For you &amp; your family</p>
+
+      <div class="cam" id="cam">
+        <div class="env-part env-back" id="envBack" aria-hidden="true">
+          <svg viewBox="0 0 316 446" width="316" height="446"><rect width="316" height="446" rx="5" fill="url(#pBrocade)"/><rect width="316" height="446" rx="5" fill="url(#gMouth)"/></svg>
+        </div>
+
+        <div class="card" id="card">
+          <div class="card-3d">
+            <div class="inner">
+              <svg class="inner-art" viewBox="0 0 316 458" width="316" height="458" aria-hidden="true">
+                <rect x="9.5" y="9.5" width="297" height="439" fill="none" stroke="url(#gBronze)" stroke-width="1.2"/>
+                <rect x="14.5" y="14.5" width="287" height="429" fill="none" stroke="#4b0e22" stroke-opacity=".22" stroke-width=".6"/>
+                <g id="toran"></g>
+                <use href="#rosette" x="19" y="425" width="14" height="14" style="color:#a77a2c"/>
+                <use href="#rosette" x="283" y="425" width="14" height="14" style="color:#a77a2c"/>
+              </svg>
+              <div class="inner-copy">
+                <p class="ic-together">Together with their families</p>
+                <div class="ic-couple">
+                  <div class="ic-person">
+                    <p class="ic-name foil-deep">Nitya Prakash</p>
+                    <p class="ic-parents">daughter of Mr. K.S. Prakash &amp; Ms. Geeta</p>
+                  </div>
+                  <p class="ic-amp">&amp;</p>
+                  <div class="ic-person">
+                    <p class="ic-name foil-deep">Piyush Aggarwal</p>
+                    <p class="ic-parents">son of Mr. Hansraj Aggarwal &amp; Ms. Santosh</p>
+                  </div>
+                </div>
+                <p class="ic-request">request the pleasure of your company<br>at their wedding celebration</p>
+                <div class="ic-date">
+                  <p class="ic-month">November</p>
+                  <div class="ic-row">
+                    <p class="ic-side">Wednesday</p>
+                    <p class="ic-day foil-deep">25</p>
+                    <p class="ic-side">2026</p>
+                  </div>
+                  <p class="ic-time">7:00 PM onwards</p>
+                </div>
+                <div class="ic-place">
+                  <p class="ic-venue">The Royal by Meraki</p>
+                  <p class="ic-addr">Sector 15, Rohini, Delhi</p>
+                </div>
+              </div>
+            </div>
+            <div class="door door-l" id="doorL" aria-hidden="true">
+              <div class="cover">
+                <svg viewBox="0 0 316 458" width="316" height="458"><use href="#coverArt"/></svg>
+                <p class="cv cv-te foil" lang="te">శుభ వివాహం</p>
+                <p class="cv cv-hi foil" lang="hi">शुभ विवाह</p>
+                <p class="cv cv-mono foil"><span>N</span><span>P</span></p>
+                <p class="cv cv-name-n foil">Nitya</p>
+                <p class="cv cv-name-p foil">Piyush</p>
+                <p class="cv cv-date">25 November 2026</p>
+              </div>
+            </div>
+            <div class="door door-r" id="doorR" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="env-part env-pocket" id="envPocket">
+          <svg viewBox="0 0 316 446" width="316" height="446" aria-hidden="true">
+            <path d="M0 4Q0 0 4 1L158 236L312 1Q316 0 316 4V440Q316 446 310 446H6Q0 446 0 440Z" fill="url(#gSilk)"/>
+            <path d="M0 446L158 270L316 446" fill="none" stroke="#3a0620" stroke-opacity=".3" stroke-width="1.2"/>
+            <path d="M2 447L158 273L314 447" fill="none" stroke="#ff9cc8" stroke-opacity=".1" stroke-width=".8"/>
+            <path d="M4 16L158 246L312 16" fill="none" stroke="url(#gGold)" stroke-width="1.3"/>
+            <rect x="18" y="405" width="280" height="9" fill="url(#pTempleUp)"/>
+            <path d="M18 402.5H298M18 416.5H298" stroke="#d6ad5c" stroke-width=".7"/>
+          </svg>
+          <div class="env-names">
+            <p class="who foil">Nitya &amp; Piyush</p>
+            <p class="when">25 · 11 · 2026</p>
+          </div>
+        </div>
+
+        <div class="env-part env-flap" id="envFlap" aria-hidden="true">
+          <div class="face out">
+            <svg viewBox="0 0 316 252" width="316" height="252">
+              <path d="M0 0H316L172 232Q158 252 144 232Z" fill="url(#gSilkFlap)" filter="url(#fShadow)"/>
+              <path d="M14 7H302L164 216Q158 225 152 216Z" fill="none" stroke="url(#gGold)" stroke-width="1.1"/>
+              <rect x="18" y="9" width="280" height="9" fill="url(#pTempleDown)"/>
+              <path d="M18 19.5H298" stroke="#d6ad5c" stroke-width=".6"/>
+            </svg>
+          </div>
+          <div class="face in">
+            <svg viewBox="0 0 316 252" width="316" height="252">
+              <path d="M0 0H316L172 232Q158 252 144 232Z" fill="url(#pBrocade)"/>
+              <path d="M0 0H316L172 232Q158 252 144 232Z" fill="none" stroke="#7a5216" stroke-width="1"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="env-part seal" id="seal" aria-hidden="true">
+          <div class="half l" id="sealL"><svg viewBox="0 0 80 80" width="80" height="80"><use href="#sealArt"/></svg></div>
+          <div class="half r" id="sealR"><svg viewBox="0 0 80 80" width="80" height="80"><use href="#sealArt"/></svg></div>
+        </div>
+      </div>
+
+      <p class="cue cue-start" id="cueStart">Scroll to open<span class="thread"></span></p>
+      <p class="cue cue-end" id="cueEnd">Scroll for the details<span class="thread"></span></p>
+    </div>
+  </div>
+</div>
+
+<main class="details" id="details">
+  <section aria-labelledby="blessing-h">
+    <p class="eyebrow" id="blessing-h">With blessings &amp; love</p>
+    <p class="quote">With the blessings of our families and the love of those who matter most, we invite you to join us as we celebrate the beginning of our forever.</p>
+    <p class="sign foil">Nitya &amp; Piyush</p>
+  </section>
+
+  <section aria-labelledby="count-h">
+    <svg class="orn" viewBox="0 0 20 20" aria-hidden="true"><use href="#rosette"/></svg>
+    <p class="eyebrow" id="count-h">The countdown begins</p>
+    <div class="count" id="count">
+      <div class="unit"><span class="num foil" id="cDays">48</span><span class="unit-l" id="cDaysL">Days</span></div>
+      <div class="unit"><span class="num foil" id="cHours">00</span><span class="unit-l">Hours</span></div>
+      <div class="unit"><span class="num foil" id="cMins">00</span><span class="unit-l">Minutes</span></div>
+    </div>
+    <p class="count-note" id="countNote">until 7:00 PM on Wednesday, 25 November</p>
+  </section>
+
+  <section aria-labelledby="facts-h">
+    <svg class="orn" viewBox="0 0 20 20" aria-hidden="true"><use href="#rosette"/></svg>
+    <p class="eyebrow" id="facts-h">The celebration</p>
+    <div class="facts">
+      <div class="fact"><span class="fact-l">The date</span><span class="fact-v">25 November 2026</span><span class="fact-s">Wednesday</span></div>
+      <div class="fact"><span class="fact-l">The time</span><span class="fact-v">7:00 PM onwards</span><span class="fact-s">Evening celebration</span></div>
+      <div class="fact"><span class="fact-l">The venue</span><span class="fact-v">The Royal by Meraki</span><span class="fact-s">Sector 15, Rohini, Delhi</span></div>
+    </div>
+    <div class="actions">
+      <a class="btn solid" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Nitya%20%26%20Piyush%E2%80%99s%20Wedding&amp;dates=20261125T133000Z/20261125T183000Z&amp;location=The%20Royal%20by%20Meraki%2C%20Sector%2015%2C%20Rohini%2C%20Delhi&amp;details=Wedding%20celebration%20of%20Nitya%20Prakash%20and%20Piyush%20Aggarwal%2C%207%3A00%20PM%20onwards." target="_blank" rel="noopener">Add to Google Calendar</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Royal%20by%20Meraki%2C%20Sector%2015%2C%20Rohini%2C%20Delhi" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="rsvp-h">
+    <svg class="orn" viewBox="0 0 20 20" aria-hidden="true"><use href="#rosette"/></svg>
+    <p class="eyebrow" id="rsvp-h">Kindly RSVP</p>
+    <p class="closing">Let Nitya or Piyush know on WhatsApp if you can make it.</p>
+  </section>
+
+  <footer aria-labelledby="close-h">
+    <svg class="orn" viewBox="0 0 20 20" aria-hidden="true"><use href="#rosette"/></svg>
+    <p class="eyebrow" id="close-h">With love &amp; gratitude</p>
+    <p class="sign foil">Nitya &amp; Piyush</p>
+    <p class="closing">We look forward to celebrating this joyous occasion with you.</p>
+    <button class="btn" id="again" type="button">Open the card again</button>
+  </footer>
+</main>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const track = $('track'), stage = $('stage'), scene = $('scene'), cam = $('cam'), card = $('card');
+  const envBack = $('envBack'), envPocket = $('envPocket'), envFlap = $('envFlap');
+  const seal = $('seal'), sealL = $('sealL'), sealR = $('sealR');
+  const doorL = $('doorL'), doorR = $('doorR');
+  const kicker = $('kicker'), cueStart = $('cueStart'), cueEnd = $('cueEnd');
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // The right door shows the same cover, shifted, so the art reads across the seam.
+  doorR.innerHTML = doorL.innerHTML;
+
+  // Toran: mango leaves and marigolds strung across the top of the inner card.
+  (function toran() {
+    let h = '<path d="M24 22Q158 46 292 22" fill="none" stroke="#8a6a2a" stroke-width=".8"/>';
+    const n = 17;
+    for (let i = 0; i < n; i++) {
+      const x = 36 + 244 * i / (n - 1), t = (x - 24) / 268, y = 22 + 24 * t * (1 - t);
+      if (i % 2 === 0) {
+        h += `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${((t - .5) * -12).toFixed(1)})">` +
+             '<path d="M0 0C4.6 5 4.6 15 0 22C-4.6 15-4.6 5 0 0Z" fill="url(#gLeaf)"/>' +
+             '<path d="M0 1.5V20" stroke="#24461f" stroke-width=".5"/></g>';
+      } else {
+        const cy = (y + 5).toFixed(1), cx = x.toFixed(1);
+        h += `<circle cx="${cx}" cy="${cy}" r="4.8" fill="#f19a1e"/>` +
+             `<circle cx="${cx}" cy="${cy}" r="4.6" fill="none" stroke="#d26a0c" stroke-width="1.2" stroke-dasharray="1.2 1.4"/>` +
+             `<circle cx="${cx}" cy="${cy}" r="1.9" fill="#e27d12"/>`;
+      }
+    }
+    h += '<use href="#rosette" x="16" y="14" width="16" height="16" style="color:#a77a2c"/>' +
+         '<use href="#rosette" x="284" y="14" width="16" height="16" style="color:#a77a2c"/>';
+    $('toran').innerHTML = h;
+  })();
+
+  const clamp = (v, a = 0, b = 1) => v < a ? a : v > b ? b : v;
+  const seg = (p, a, b) => clamp((p - a) / (b - a));
+  const io = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  /* Timeline, as a fraction of the scroll track:
+     .03-.12 seal cracks · .11-.25 flap lifts · .25-.45 card slides out · .45-.57 envelope falls away
+     .61-.82 the gatefold doors swing open · petals at .70 · details cue from .86 */
+  let burstArmed = true;
+  function render(p) {
+    scene.style.setProperty('--sheen', (12 + 76 * p).toFixed(1) + '%');
+    cueStart.style.opacity = (1 - seg(p, 0, .035)).toFixed(3);
+    kicker.style.opacity = (1 - seg(p, .02, .1)).toFixed(3);
+
+    const s = io(seg(p, .03, .12));
+    sealL.style.transform = `translate(${(-18 * s).toFixed(2)}px,${(46 * s * s).toFixed(2)}px) rotate(${(-26 * s).toFixed(2)}deg)`;
+    sealR.style.transform = `translate(${(18 * s).toFixed(2)}px,${(46 * s * s).toFixed(2)}px) rotate(${(26 * s).toFixed(2)}deg)`;
+    const sealOp = 1 - seg(p, .075, .12);
+    seal.style.opacity = sealOp.toFixed(3);
+    seal.style.visibility = sealOp <= 0 ? 'hidden' : 'visible';
+
+    const ang = 180 * io(seg(p, .11, .25));
+    const rise = io(seg(p, .25, .45)), settle = io(seg(p, .45, .57));
+    const envY = 150 * rise + 640 * settle;
+    const envOp = 1 - seg(p, .49, .56);
+    cam.style.transform = `scale(${(1 - .4 * rise + .4 * settle).toFixed(4)})`;
+    const et = `translateY(${envY.toFixed(2)}px)`;
+    envBack.style.transform = et;
+    envPocket.style.transform = et;
+    envFlap.style.transform = `${et} perspective(1400px) rotateX(${ang.toFixed(2)}deg)`;
+    envFlap.style.zIndex = ang > 90 ? 2 : 5;
+    for (const el of [envBack, envPocket, envFlap]) {
+      el.style.opacity = envOp.toFixed(3);
+      el.style.visibility = envOp <= 0 ? 'hidden' : 'visible';
+    }
+
+    const cy = -288 * rise * (1 - settle), cs = .92 + .08 * settle;
+    card.style.transform = `translateY(${cy.toFixed(2)}px) scale(${cs.toFixed(4)})`;
+    card.style.zIndex = rise >= .999 ? 7 : 3;
+
+    const th = 102 * io(seg(p, .61, .82));
+    const dop = 1 - clamp((th - 48) / 50);
+    doorL.style.transform = `rotateY(${(-th).toFixed(2)}deg)`;
+    doorR.style.transform = `rotateY(${th.toFixed(2)}deg)`;
+    doorL.style.opacity = doorR.style.opacity = dop.toFixed(3);
+    doorL.style.visibility = doorR.style.visibility = dop <= 0 ? 'hidden' : 'visible';
+
+    cueEnd.style.opacity = seg(p, .86, .93).toFixed(3);
+
+    if (!RM) {
+      if (p > .7 && burstArmed) { burstArmed = false; burst(); }
+      if (p < .55) burstArmed = true;
+    }
+  }
+
+  // Scroll -> progress, eased toward the target so wheel steps glide.
+  let target = 0, cur = 0, raf = 0;
+  function measure() {
+    const r = track.getBoundingClientRect(), total = r.height - stage.offsetHeight;
+    return total > 0 ? clamp(-r.top / total) : 1;
+  }
+  function tick() {
+    raf = 0;
+    const d = target - cur;
+    cur = Math.abs(d) < .0005 ? target : cur + d * .16;
+    render(cur);
+    if (cur !== target) raf = requestAnimationFrame(tick);
+  }
+  function onScroll() { target = measure(); if (!raf) raf = requestAnimationFrame(tick); }
+
+  // ---------- string lights ----------
+  const sky = $('sky'), sx = sky.getContext('2d');
+  let SW = 0, SH = 0, bulbs = [], wires = [];
+  const glow = (() => {
+    const c = document.createElement('canvas'); c.width = c.height = 48;
+    const g = c.getContext('2d'), rg = g.createRadialGradient(24, 24, 0, 24, 24, 24);
+    rg.addColorStop(0, 'rgba(255,236,190,1)'); rg.addColorStop(.14, 'rgba(255,206,120,.75)');
+    rg.addColorStop(.45, 'rgba(255,170,70,.14)'); rg.addColorStop(1, 'rgba(255,170,70,0)');
+    g.fillStyle = rg; g.fillRect(0, 0, 48, 48); return c;
+  })();
+  function layoutSky() {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    SW = innerWidth; SH = innerHeight;
+    sky.width = Math.round(SW * dpr); sky.height = Math.round(SH * dpr);
+    sx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    bulbs = []; wires = [];
+    let seed = 11; const rnd = () => (seed = seed * 16807 % 2147483647) / 2147483647;
+    const bulb = (x, y, k) => bulbs.push({ x, y, r: 9 + rnd() * 5, base: k * (.65 + rnd() * .35), sp: .8 + rnd() * 1.8, ph: rnd() * 6.3 });
+    [{ y: -3, sag: Math.min(64, SH * .08), span: 300, gap: 24, k: 1 }, { y: -8, sag: Math.min(110, SH * .13), span: 420, gap: 30, k: .7 }]
+      .forEach((row, ri) => {
+        const n = Math.max(2, Math.round(SW / row.span)), w = SW / n;
+        for (let i = 0; i <= n; i++) {
+          const x0 = i * w - (ri ? w / 2 : 0), pts = [];
+          for (let t = 0; t <= 1.0001; t += .05) pts.push([x0 + w * t, row.y + row.sag * 4 * t * (1 - t)]);
+          wires.push(pts);
+          const m = Math.floor(w / row.gap);
+          for (let k = 0; k < m; k++) { const t = (k + .5) / m; bulb(x0 + w * t, row.y + row.sag * 4 * t * (1 - t) + 2, row.k); }
+        }
+      });
+    const side = scene.getBoundingClientRect().left;
+    if (side > 90) {
+      const count = Math.floor((side - 30) / 36);
+      for (let j = 0; j < count; j++) {
+        for (const dir of [1, -1]) {
+          const x = dir > 0 ? 26 + j * 36 : SW - 26 - j * 36, len = SH * (.22 + rnd() * .5);
+          wires.push([[x, 0], [x, len]]);
+          for (let y = 18; y < len; y += 22) bulb(x, y, .8);
+        }
+      }
+    }
+  }
+  function drawSky(t) {
+    sx.clearRect(0, 0, SW, SH);
+    sx.lineWidth = .7; sx.strokeStyle = 'rgba(240,200,140,.16)';
+    for (const w of wires) { sx.beginPath(); w.forEach((pt, i) => i ? sx.lineTo(pt[0], pt[1]) : sx.moveTo(pt[0], pt[1])); sx.stroke(); }
+    for (const b of bulbs) {
+      sx.globalAlpha = b.base * (RM ? .85 : .62 + .38 * Math.sin(t * b.sp + b.ph));
+      sx.drawImage(glow, b.x - b.r, b.y - b.r, b.r * 2, b.r * 2);
+    }
+    sx.globalAlpha = 1;
+  }
+  let lastSky = 0;
+  function skyLoop(ts) { if (ts - lastSky > 60) { lastSky = ts; drawSky(ts / 1000); } requestAnimationFrame(skyLoop); }
+
+  // ---------- petal shower: marigold, rose and jasmine ----------
+  const pc = $('petals'), px = pc.getContext('2d');
+  let PW = 0, PH = 0, petals = [], prun = false, plast = 0;
+  const PCOL = [['#f29a1e', '#d9700f'], ['#f7b52a', '#e08d12'], ['#f29a1e', '#d9700f'], ['#c2183f', '#8e0f2c'], ['#fff7e8', '#e9dcc4']];
+  function sizePetals() {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    PW = innerWidth; PH = innerHeight;
+    pc.width = Math.round(PW * dpr); pc.height = Math.round(PH * dpr);
+    px.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function burst() {
+    const n = Math.round(Math.min(110, 50 + PW / 18));
+    for (let i = 0; i < n; i++) {
+      const c = PCOL[Math.floor(Math.random() * PCOL.length)], jas = c[0] === '#fff7e8';
+      petals.push({
+        x: Math.random() * PW, y: -20 - Math.random() * PH * .8, vy: 90 + Math.random() * 90,
+        sw: 10 + Math.random() * 30, sp: .8 + Math.random() * 1.6, ph: Math.random() * 6.3,
+        rot: Math.random() * 6.3, vr: (Math.random() - .5) * 3, fl: Math.random() * 6.3,
+        w: jas ? 2.4 : 3.4 + Math.random() * 2.6, h: jas ? 7.5 : 5 + Math.random() * 4, c
+      });
+    }
+    if (!prun) { prun = true; plast = performance.now(); requestAnimationFrame(pstep); }
+  }
+  function pstep(ts) {
+    const dt = Math.min(.05, (ts - plast) / 1000); plast = ts;
+    px.clearRect(0, 0, PW, PH);
+    petals = petals.filter(q => q.y < PH + 30);
+    for (const q of petals) {
+      q.y += q.vy * dt; q.ph += q.sp * dt; q.rot += q.vr * dt; q.fl += 3 * dt;
+      px.save();
+      px.translate(q.x + Math.sin(q.ph) * q.sw, q.y);
+      px.rotate(q.rot);
+      px.scale(1, .35 + .65 * Math.abs(Math.sin(q.fl)));
+      px.beginPath(); px.ellipse(0, 0, q.w, q.h, 0, 0, 6.2832);
+      px.fillStyle = q.c[0]; px.fill();
+      px.lineWidth = .6; px.strokeStyle = q.c[1]; px.stroke();
+      px.restore();
+    }
+    if (petals.length) requestAnimationFrame(pstep); else { prun = false; px.clearRect(0, 0, PW, PH); }
+  }
+
+  // ---------- countdown to 7:00 PM IST, 25 Nov 2026 ----------
+  const WED = Date.UTC(2026, 10, 25, 13, 30);
+  const pad = n => String(n).padStart(2, '0');
+  function updateCount() {
+    const ms = WED - Date.now();
+    if (ms <= 0) {
+      $('count').hidden = true;
+      $('countNote').textContent = ms > -12 * 3600e3 ? 'Today is the day!' : 'Married on 25 November 2026';
+      return;
+    }
+    const m = Math.floor(ms / 6e4), d = Math.floor(m / 1440);
+    $('cDays').textContent = d;
+    $('cDaysL').textContent = d === 1 ? 'Day' : 'Days';
+    $('cHours').textContent = pad(Math.floor(m % 1440 / 60));
+    $('cMins').textContent = pad(m % 60);
+  }
+  updateCount(); setInterval(updateCount, 20000);
+
+  $('again').addEventListener('click', () => window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' }));
+
+  // ---------- fit + boot ----------
+  function fit() {
+    const s = Math.min(stage.clientWidth / 392, stage.clientHeight / 676, 1.75);
+    scene.style.zoom = s;
+    layoutSky(); sizePetals();
+    if (RM) drawSky(0);
+  }
+  if (RM) document.documentElement.classList.add('rm');
+  fit();
+  if (RM) {
+    render(1);
+  } else {
+    target = cur = measure(); render(cur);
+    addEventListener('scroll', onScroll, { passive: true });
+    requestAnimationFrame(skyLoop);
+  }
+  addEventListener('resize', () => { fit(); if (!RM) onScroll(); });
+  document.fonts && document.fonts.ready.then(() => { if (!RM) render(cur); });
+})();
+</script>
+
+</body>
+</html>
